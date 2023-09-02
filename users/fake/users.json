@@ -2,7 +2,7 @@
     {
         "id": 1,
         "username": "admin",
-        "email": "admin@baran.com",
+        "email": "admin@example.com",
         "full_name": "Admin Admin",
         "user_type": "admin",
         "hashed_password": "$2b$12$16kNu5IW80k1Tw7xz2H3iOCsz0.oMZ7q5OSGa/OIfOae0WGFe8aI2",
@@ -10,20 +10,29 @@
     },
     {
         "id": 2,
-        "username": "baranbartu",
-        "email": "baran@baran.com",
-        "full_name": "Baran Bartu Demirci",
+        "username": "johndoe",
+        "email": "johndoe@example.com",
+        "full_name": "Johh Doe",
         "user_type": "default",
         "hashed_password": "$2b$12$o5FUxT.lT6PZXU8KHPz4tug1yGI.gXuyZNT8VWbKBNaAEP10/yI.W",
         "created_by": 1
     },
     {
         "id": 3,
-        "username": "test",
-        "email": "test@baran.com",
-        "full_name": "tset tset",
-        "user_type": "default",
-        "hashed_password": "$2b$12$wf5AZPA/b4gesbPoMUcc2.BvIbGdDQFLd5SZizK9pthHo09WPf/Em",
+        "username": "hasan",
+        "email": "hasan@example.com",
+        "full_name": "hasan_osman",
+        "user_type": "admin",
+        "hashed_password": "$2b$12$LgLkh1xAwZB5lBt3SaCkZe3NmNaDKyLOwMH8i2IH/R5eCLVwibgVq",
+        "created_by": 1
+    },
+    {
+        "id": 4,
+        "username": "ahmet",
+        "email": "ahmet@example.com",
+        "full_name": "ahmet_mehmet",
+        "user_type": "admin",
+        "hashed_password": "$2b$12$oNCPD3HGcj8k4l3ASqu3PuxNVSrcSMW82YFF9AFQTHD6Glx7PesY6",
         "created_by": 1
     }
 ]

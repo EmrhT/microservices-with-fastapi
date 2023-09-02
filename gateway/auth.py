@@ -1,4 +1,4 @@
-import jwt
+from jose import JWTError, jwt
 
 from datetime import datetime, timedelta
 
@@ -6,7 +6,7 @@ from conf import settings
 from exceptions import AuthTokenMissing, AuthTokenExpired, AuthTokenCorrupted
 
 
-SECRET_KEY = 'e0e5f53b239df3dc39517c34ae0a1c09d1f5d181dfac1578d379a4a5ee3e0ef5'
+SECRET_KEY = '706277d1320f1349a903fc18916db99ab1098acb62a8f62d5bc234ec5778c15c'
 ALGORITHM = 'HS256'
 
 
@@ -40,6 +40,7 @@ def decode_access_token(authorization: str = None):
         raise AuthTokenExpired('Auth token is expired.')
     except jwt.exceptions.DecodeError:
         raise AuthTokenCorrupted('Auth token is corrupted.')
+        
 
 
 def generate_request_header(token_payload):

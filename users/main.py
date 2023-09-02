@@ -11,6 +11,8 @@ from fake.db import (get_user_by_username,
                      delete_user_from_db,
                      update_user_in_db)
 
+from fastapi import Depends, FastAPI, HTTPException, status
+
 app = FastAPI()
 PROTECTED_USER_IDS = [1, 2]
 

@@ -5,11 +5,10 @@ from tortoise.contrib.fastapi import register_tortoise
 
 from models import Order_Pydantic, OrderIn_Pydantic, Orders
 
-
 app = FastAPI()
 
 
-@app.get('/api/orders', response_model=List[Order_Pydantic])
+@app.get('/api/orders', response_model=List[Order_Pydantic], tags=["orders"])
 async def get_orders(request_user_id: str = Header(None)):
     return await Order_Pydantic.from_queryset(
         Orders.filter(created_by=request_user_id)

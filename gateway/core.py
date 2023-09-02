@@ -20,7 +20,7 @@ def route(
         service_header_generator: str = 'auth.generate_request_header',
         response_model: str = None,
         response_list: bool = False
-):
+    ):
     """
     it is an advanced wrapper for FastAPI router, purpose is to make FastAPI
     acts as a gateway API in front of anything

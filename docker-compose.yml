@@ -2,8 +2,7 @@ version: '3.7'
 
 services:
     gateway:
-        image: baranbartu/k-api-gateway:latest
-        command: sh -c "uvicorn main:app --reload --host 0.0.0.0"
+        command: sh -c "uvicorn main:app --reload --log-level 'trace' --host 0.0.0.0"
         build:
             context: ./gateway
             dockerfile: Dockerfile
@@ -18,8 +17,7 @@ services:
           - ./gateway:/app
 
     users:
-        image: baranbartu/k-users:latest
-        command: sh -c "uvicorn main:app --reload --host 0.0.0.0"
+        command: sh -c "uvicorn main:app --reload --log-level 'trace' --host 0.0.0.0"
         build:
             context: ./users
             dockerfile: Dockerfile
@@ -29,8 +27,7 @@ services:
           - ./users:/app
 
     orders:
-        image: baranbartu/k-orders:latest
-        command: sh -c "uvicorn main:app --reload --host 0.0.0.0"
+        command: sh -c "uvicorn main:app --reload --log-level 'trace' --host 0.0.0.0"
         build:
             context: ./orders
             dockerfile: Dockerfile
@@ -38,3 +35,13 @@ services:
             - ./orders/.env
         volumes:
           - ./orders:/app
+
+    suppliers:
+        command: sh -c "uvicorn main:app --reload --log-level 'trace' --host 0.0.0.0"
+        build:
+            context: ./suppliers
+            dockerfile: Dockerfile
+        env_file:
+            - ./suppliers/.env
+        volumes:
+          - ./suppliers:/app

@@ -7,6 +7,8 @@ from datastructures.users import (UsernamePasswordForm,
                                   UserForm,
                                   UserUpdateForm)
 from datastructures.orders import OrderForm
+from datastructures.suppliers import SupplierForm
+
 
 app = FastAPI()
 
@@ -19,7 +21,7 @@ app = FastAPI()
     service_url=settings.USERS_SERVICE_URL,
     authentication_required=False,
     post_processing_func='post_processing.access_token_generate_handler',
-    response_model='datastructures.users.LoginResponse'
+    response_model='datastructures.users.LoginResponse',
 )
 async def login(username_password: UsernamePasswordForm,
                 request: Request, response: Response):
@@ -145,3 +147,34 @@ async def get_orders(request: Request, response: Response):
 )
 async def create_order(order: OrderForm, request: Request, response: Response):
     pass
+
+@route(
+    request_method=app.get,
+    path='/api/suppliers',
+    status_code=status.HTTP_200_OK,
+    payload_key=None,
+    service_url=settings.SUPPLIERS_SERVICE_URL,
+    authentication_required=False,
+    post_processing_func=None,
+    response_model='datastructures.suppliers.SupplierResponse',
+    response_list=True,
+)
+async def get_suppliers(request: Request, response: Response):
+    pass
+
+@route(
+    request_method=app.post,
+    path='/api/suppliers',
+    status_code=status.HTTP_200_OK,
+    payload_key='supplier',
+    service_url=settings.SUPPLIERS_SERVICE_URL,
+    authentication_required=True,
+    post_processing_func=None,
+    authentication_token_decoder='auth.decode_access_token',
+    service_authorization_checker='auth.is_default_user',
+    service_header_generator='auth.generate_request_header',
+    response_model='datastructures.suppliers.SupplierResponse',
+)
+async def create_supplier(supplier: SupplierForm, request: Request, response: Response):
+    pass
+
