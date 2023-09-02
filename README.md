@@ -5,7 +5,7 @@
   Now we have 4 including microservices.
 - Requirements in the original repo was updated. 
 - Only gateway can access internal microservices through the internal network (users, orders, suppliers)
-- For more details please visit my medium story here --> 
+- For more details please visit my Medium story here --> 
 
 ## Running
 - check ./gateway/.env => 3 services url are defined
