@@ -16,23 +16,5 @@
         "user_type": "default",
         "hashed_password": "$2b$12$o5FUxT.lT6PZXU8KHPz4tug1yGI.gXuyZNT8VWbKBNaAEP10/yI.W",
         "created_by": 1
-    },
-    {
-        "id": 3,
-        "username": "hasan",
-        "email": "hasan@example.com",
-        "full_name": "hasan_osman",
-        "user_type": "admin",
-        "hashed_password": "$2b$12$LgLkh1xAwZB5lBt3SaCkZe3NmNaDKyLOwMH8i2IH/R5eCLVwibgVq",
-        "created_by": 1
-    },
-    {
-        "id": 4,
-        "username": "ahmet",
-        "email": "ahmet@example.com",
-        "full_name": "ahmet_mehmet",
-        "user_type": "admin",
-        "hashed_password": "$2b$12$oNCPD3HGcj8k4l3ASqu3PuxNVSrcSMW82YFF9AFQTHD6Glx7PesY6",
-        "created_by": 1
     }
 ]

@@ -1,0 +1,9 @@
+curl --header "Content-Type: application/json" \
+     --request POST \
+     --data '{"name": "john", "surname": "doe", "address": "somewhere@planetearth"}' \
+     http://localhost:8001/api/suppliers
+
+
+curl --header "Content-Type: application/json" \
+     --request GET \
+     http://localhost:8001/api/suppliers

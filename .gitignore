@@ -233,3 +233,5 @@ dist
 
 # TernJS port file
 .tern-port
+
+./curls.txt

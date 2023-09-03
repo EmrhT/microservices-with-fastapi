@@ -3,7 +3,6 @@ from pydantic import BaseModel
 from tortoise import fields, models
 from tortoise.contrib.pydantic import pydantic_model_creator
 
-
 class Suppliers(models.Model):
     id = fields.IntField(pk=True)
     name = fields.TextField()
@@ -14,7 +13,6 @@ class Suppliers(models.Model):
 
 
 Supplier_Pydantic = pydantic_model_creator(Suppliers, name='Supplier')
-
 
 class SupplierIn_Pydantic(BaseModel):
     name: str
