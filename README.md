@@ -2,7 +2,7 @@
 - This repo (forked from https://github.com/baranbartu/microservices-with-fastapi)
   is composed of a bunch of small microservices.
 - Original number of microservices were two, I added suppliers as the third one.
-  Now we have 4 including microservices.
+  Now we have 4 including the gateway.
 - Requirements in the original repo was updated. 
 - Only gateway can access internal microservices through the internal network (users, orders, suppliers)
 - For more details please visit my Medium story here --> 
