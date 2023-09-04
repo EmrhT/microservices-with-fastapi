@@ -5,7 +5,9 @@
   Now we have 4 including the gateway.
 - Requirements in the original repo was updated. 
 - Only gateway can access internal microservices through the internal network (users, orders, suppliers)
-- For more details please visit my Medium story here --> 
+- For more details please visit my Medium stories.
+- Part I  --> https://medium.com/@emrah-t/building-microservices-with-fastapi-part-i-introduction-to-the-fastapi-framework-a7488cdbea
+- Part II --> https://medium.com/@emrah-t/building-microservices-with-fastapi-part-ii-a-microservice-application-with-fastapi-c190d57922ba
 
 ## Running
 - check ./gateway/.env => 3 services url are defined
